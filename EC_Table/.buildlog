@@ -1,0 +1,17 @@
+---
+build.dart --machine --full
+Unable to open file: C:/Users/Kevin/Documents/GitHub/MongoDB-Polymer/EC_Table/packages/polymer/builder.dart'file:///C:/Users/Kevin/Documents/GitHub/MongoDB-Polymer/EC_Table/build.dart': error: line 1 pos 1: library handler failed
+import 'package:polymer/builder.dart';
+^
+build.dart finished [45 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+
+build.dart finished [971 ms]
+
+---
+build.dart --machine --changed=build\ec_table.css --changed=build\ec_table.html --changed=build\ec_table.html_b...
+
+build.dart finished [900 ms]
+

@@ -1,0 +1,15 @@
+<polymer-element name="volume-nob">
+  <template>
+  
+    <button on-click="{{increment}}">Click Me</button>
+    <template if="{{count <= 0}}">
+      <p>Click the button. It's fun!</p>
+    </template>
+    <template if="{{count > 0}}">
+      <p>You clicked the button {{count}} times.</p>
+    </template>
+    
+    <p>You turned the volume to {{volume}}.</p>
+  </template>
+  <script type="application/dart" src="volumn.dart"></script>
+</polymer-element>
