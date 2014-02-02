@@ -1,12 +1,14 @@
-<polyymer-element name="fav-fruits">
+<polymer-element name="table-generator">
   <template>
-    <ul>
-      <template repeat="{{fruit in fruits}}">
-        <li>
-          I like {{fruit}}.
-        </li>
-      </template>
-    </ul>
+    <div>
+      <table border="1">
+        <tbody>
+          <template repeat="{{ 6 | myFilter}}">
+          <tr><td>Write me </td><td></td></tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
   </template>
   <script type="application/dart" src="EC_table_template.dart"></script>
 </polymer-element>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+
+<link rel="import" href="packages/polymer_elements/polymer_grid_layout/polymer_grid_layout.html">
+<link rel="import" href="EC_table_template.html">
+<link rel="import" href="EC_table_profile.html">
+
+<polymer-element name="grid-test">
+  <template>
+    <polymer-grid-layout xnodes="{{xnodes}}" layout="{{layout}}"></polymer-grid-layout>
+    
+    <panel id="toolbar">toolbar</panel>
+    <panel id="sidebar" v-flex>sidebar</panel>
+    <panel id="workspace" flex>
+    <h1> [workspace] table-generator example</h1>
+    <table-generator></table-generator>
+    </panel>
+    <panel id="outputToolbar">otherbar</panel>
+    <panel id="output" v-flex>
+      output
+      <h2>Documentation</h2>
+      <h1>Verbiage</h1>
+      <p>In backbone record integer LED amplified internet protocol a extension reflective. 
+      Array kilohertz LED. Wavelength extension patch supporting wave an by prompt.</p>
+      
+      <h1> table-profile example</h1>
+      <table-profile></table-profile>
+    </panel>
+    
+    <style>
+      * {
+        -webkit-transition: top, right, bottom, left;
+        -webkit-transition-duration: 0.3s;
+      }
+      panel {
+        display: inline-block;
+        border: 4px dotted lightblue;
+        padding: 16px;
+      }
+      #outputToolbar {
+        width: 400px;
+      }
+      #output {
+        width: 400px;
+      }
+      #workspace {
+        border-color: orange;
+      }
+    </style>    
+  </template>
+  <script type="application/dart" src="grid_test.dart"></script>
+</polymer-element>

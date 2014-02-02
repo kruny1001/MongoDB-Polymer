@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<polymer-element name="table-profile">
+  <template>
+    <h2> One-way bindings </h2>
+    <div>First name: {{Users[0].firstName}}</div>
+    <div>Last name: {{bob.lastName}}</div>
+    <div>Full name: {{bob.fullName}}</div> <!-- getters work -->
+    <div>Age: {{bob.age}}</div> <!-- ints work -->
+    <div>Signed agreement? {{bob.signedAgreement}}</div>
+    <div>Number of favorite colors: {{bob.favoriteColors.length}}</div>
+    <div>Number of addresses: {{bob.addresses.length}}</div>
+    <div>Dotted notation works into lists: {{bob.favoriteColors[0].name}}</div>
+    <div>Dotted notation works into maps: {{bob.addresses['home'].city}}</div>
+    
+    <h2>Two-way binding</h2>
+    
+    <div>
+    First name: <input type="text" value="{{bob.firstName}}" name="firstName">
+    </div>
+    
+    <h2>Iteration aka looping aka repeat</h2>
+    
+    <ul>
+      <template repeat="{{color in bob.favoriteColors}}">
+        <li>{{color}}</li>
+      </template>
+    </ul>
+
+    <h2>Looping over keys in a map:</h2>
+    
+    <ul>
+      <template repeat="{{k in bob.addresses.keys}}">
+        <li>{{bob.addresses[k].city}}</li>
+      </template>
+    </ul>
+
+    <h2>Expressions</h2>
+    
+    <div>You can do math: {{ (1+2) / 3 * 100 }}</div>
+    <div>You can logical not (!): {{ !bob.signedAgreement }}</div>
+    
+    <h2>Conditionals</h2>
+    
+    <template if="{{bob.age > 21}}">
+      <div>&lt; work</div>
+    </template>
+    
+    <template if="{{bob.age > 21 && bob.signedAgreement}}">
+      <div>&& and || also works</div>
+    </template>
+    
+    <!-- Only with fancy-syntax -->
+    <template if="{{bob.age == 42}}">
+      <div>== also works, as does !=</div>
+    </template>
+    
+    <h2>With a boolean</h2>
+    
+    <template if="{{bob.signedAgreement}}">
+      <div>Yay they signed the agreement.</div>
+    </template>
+    
+    <template if="{{!bob.signedAgreement}}">
+      <div>Why you no like to sign?</div>
+    </template>
+    
+    <h2>With a null</h2>
+    
+    <div>conditionals also work with null (false) (see source)</div>
+    <template if="{{bob.company}}">
+      <div>Does not show up, company is null</div>
+    </template>
+    
+    <template if="{{!bob.company}}">
+      <div>This does show up, company is null, which is treated as false</div>
+    </template>
+    
+    <h2>Filters and transformers</h2>
+    
+    <!-- Transform a field with the | transformers -->
+    <!-- This comes from a global transformer function registered with
+         PolymerExpressions in my_example.dart -->
+    <div>Uppercase: {{bob.fullName | uppercase}}</div>
+    
+    <h2>Gracefully handle a non-existant property</h2>
+    
+    <div>This should not break the app, even though we're accessing a null: {{ thisIsNull.street }}</div>
+
+    <!-- PolymerExpressions is tolerant of null fields -->
+    <template repeat="{{nullColor in bob.nullColors}}">
+      <p>this should not break the app</p>
+    </template>
+  </template>
+  <script type="application/dart" src="EC_table_profile.dart"></script>
+</polymer-element>
+    

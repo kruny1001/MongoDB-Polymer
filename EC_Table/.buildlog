@@ -15,3 +15,38 @@ build.dart --machine --changed=build\ec_table.css --changed=build\ec_table.html 
 
 build.dart finished [900 ms]
 
+---
+build.dart --machine --clean
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (polymer-element). Ignored.","line":12,"charStart":275,"charEnd":293}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Expected closing tag. Unexpected end of file.","line":1,"charStart":0,"charEnd":36}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"definition for Polymer element with tag name \"polyymer-element\" not found.","line":1,"charStart":0,"charEnd":36}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (polymer-element). Ignored.","line":12,"charStart":275,"charEnd":293}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Expected closing tag. Unexpected end of file.","line":1,"charStart":0,"charEnd":36}}]
+[{"method":"warning","params":{"file":"web/ec_table.html","message":"definition for Polymer element with tag name \"fav-fruits\" not found.","line":45,"charStart":1006,"charEnd":1018}}]
+build.dart finished [994 ms]
+
+---
+build.dart --machine --clean
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (polymer-element). Ignored.","line":4,"charStart":141,"charEnd":159}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Expected closing tag. Unexpected end of file.","line":1,"charStart":0,"charEnd":43}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"definition for Polymer element with tag name \"polyymer-element\" not found.","line":1,"charStart":0,"charEnd":43}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (polymer-element). Ignored.","line":4,"charStart":141,"charEnd":159}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Expected closing tag. Unexpected end of file.","line":1,"charStart":0,"charEnd":43}}]
+[{"method":"warning","params":{"file":"web/ec_table.html","message":"definition for Polymer element with tag name \"ec-table-template\" not found.","line":45,"charStart":1006,"charEnd":1025}}]
+build.dart finished [964 ms]
+
+---
+build.dart --machine --clean
+[{"method":"warning","params":{"file":"web/ec_table.html","message":"definition for Polymer element with tag name \"ec-table-template\" not found.","line":45,"charStart":1006,"charEnd":1025}}]
+build.dart finished [929 ms]
+
+---
+build.dart --machine --clean
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected start tag (template) in table context caused voodoo mode.","line":6,"charStart":115,"charEnd":152}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (template) in table context caused voodoo mode.","line":8,"charStart":210,"charEnd":221}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (template). Ignored.","line":8,"charStart":210,"charEnd":221}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected start tag (template) in table context caused voodoo mode.","line":6,"charStart":115,"charEnd":152}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (template) in table context caused voodoo mode.","line":8,"charStart":210,"charEnd":221}}]
+[{"method":"warning","params":{"file":"web/EC_table_template.html","message":"Unexpected end tag (template). Ignored.","line":8,"charStart":210,"charEnd":221}}]
+build.dart finished [1485 ms]
+
